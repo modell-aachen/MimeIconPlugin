@@ -1,0 +1,72 @@
+%META:TOPICINFO{author="micha" comment="reprev" date="1369210565" format="1.1" reprev="3" version="3"}%
+---+!! %TOPIC%
+%SHORTDESCRIPTION%
+
+%TOC%
+
+This plugin tries to map known mime types commonly found on the internet to an icon set.
+There are not many icon sets that have a got coverage of mime types despite looking nicely,
+yet still coherent, not too exotic so that they can be used with a variety of web designs
+without too much of a problem.
+
+!MimeIconPlugin comes with two complete icon sets, namely =oxygen= and =crystal= provided in 
+several sizes.
+
+---++ Usage
+
+!MimeIconPlugin implements a single macro [[VarMIMEICON][%MIMEICON]] which returns the right icon
+in the desired size of an icon theme for a given file.
+
+For instance you type:
+<verbatim class="tml">
+%MIMEICON{
+  "screenshot.png" 
+  size="48" 
+  theme="oxygen"
+}%
+</verbatim>
+
+will give you:
+
+%MIMEICON{
+  "screenshot.png" 
+  size="48" 
+  theme="oxygen"
+}%
+
+if this plugin is installed.
+
+The idea is that you can pretty much throw any file at it and =%MIMEICON= will return the right icon for it
+reflecting the mimetype of this file. Well, obviously there is a fallback to a neutral icon in case some
+file extension is totally unknown.
+
+---++ Examples
+
+---+++ Oxygen
+<img src="%ATTACHURLPATH%/MimeIconPluginSnap2.png" /> 
+
+---+++ Crystal
+<img src="%ATTACHURLPATH%/MimeIconPluginSnap1.png" /> 
+
+---++ Installation Instructions
+
+%$INSTALL_INSTRUCTIONS%
+
+---++ Info
+<!--
+   * Set SHORTDESCRIPTION = Icon sets for mimetypes
+-->
+|  Author(s): | Michael Daum|
+|  Copyright: | &copy; 2010-2013 Michael Daum http://michaeldaumconsulting.com |
+|  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
+|  Release: | %$RELEASE% |
+|  Version: | %$VERSION% |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  2013-05-22: | (1.20) only ship icons covered by a mapping |
+|  2011-11-16: | (1.10) fixed mapping in oxygen icon set; fix to make sure the icon mapping is read in properly |
+|  Dependencies: | %$DEPENDENCIES% |
+|  Home page: | Foswiki:Extensions/%TOPIC% |
+|  Support: | Foswiki:Support/%TOPIC% |
+
+%META:FILEATTACHMENT{name="MimeIconPluginSnap2.png" attachment="MimeIconPluginSnap2.png" attr="" comment="" date="1369210411" size="41588" user="micha" version="1"}%
+%META:FILEATTACHMENT{name="MimeIconPluginSnap1.png" attachment="MimeIconPluginSnap3.png" attr="" comment="" date="1369210410" moveby="micha" movedto="System.MimeIconPlugin.MimeIconPluginSnap1.png" movedwhen="1369210422" movefrom="System.MimeIconPlugin.MimeIconPluginSnap3.png" size="18836" user="micha" version="1"}%
