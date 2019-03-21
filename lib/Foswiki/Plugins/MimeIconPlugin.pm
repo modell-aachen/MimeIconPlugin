@@ -196,7 +196,7 @@ sub getBestSize {
         last;
       }
     }
-    print STDERR "bestSize=$bestSize size=$size\n";
+    print STDERR "bestSize=$bestSize size=$size\n" if $Foswiki::cfg{Plugins}{MimeIconPlugin}{Debug};
     return $bestSize;
   }
 }
